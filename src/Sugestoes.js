@@ -6,65 +6,42 @@ export default function Sugestoes() {
                         <div>Ver tudo</div>
                     </div>
 
-                    <div class="sugestao">
-                        <div class="usuario">
-                            <img src="assets/img/bad.vibes.memes.svg" />
-                            <div class="texto">
-                                <div class="nome">bad.vibes.memes</div>
-                                <div class="razao">Segue você</div>
-                            </div>
-                        </div>
-
-                        <div class="seguir">Seguir</div>
-                    </div>
-
-                    <div class="sugestao">
-                        <div class="usuario">
-                            <img src="assets/img/chibirdart.svg" />
-                            <div class="texto">
-                                <div class="nome">chibirdart</div>
-                                <div class="razao">Segue você</div>
-                            </div>
-                        </div>
-
-                        <div class="seguir">Seguir</div>
-                    </div>
-
-                    <div class="sugestao">
-                        <div class="usuario">
-                            <img src="assets/img/razoesparaacreditar.svg" />
-                            <div class="texto">
-                                <div class="nome">razoesparaacreditar</div>
-                                <div class="razao">Novo no Instagram</div>
-                            </div>
-                        </div>
-
-                        <div class="seguir">Seguir</div>
-                    </div>
-
-                    <div class="sugestao">
-                        <div class="usuario">
-                            <img src="assets/img/adorable_animals.svg" />
-                            <div class="texto">
-                                <div class="nome">adorable_animals</div>
-                                <div class="razao">Segue você</div>
-                            </div>
-                        </div>
-
-                        <div class="seguir">Seguir</div>
-                    </div>
-
-                    <div class="sugestao">
-                        <div class="usuario">
-                            <img src="assets/img/smallcutecats.svg" />
-                            <div class="texto">
-                                <div class="nome">smallcutecats</div>
-                                <div class="razao">Segue você</div>
-                            </div>
-                        </div>
-
-                        <div class="seguir">Seguir</div>
-                    </div>
+                    <Sugestao 
+                        imagemUsuario="assets/img/bad.vibes.memes.svg"
+                        nomeUsuario="bad.vibes.memes"
+                        razaoUsuario="Segue você"/>
+                    <Sugestao 
+                        imagemUsuario="assets/img/chibirdart.svg"
+                        nomeUsuario="chibirdart"
+                        razaoUsuario="Segue você"/>
+                    <Sugestao 
+                        imagemUsuario="assets/img/razoesparaacreditar.svg"
+                        nomeUsuario="razoesparaacreditar"
+                        razaoUsuario="Novo no Instagram"/>
+                    <Sugestao 
+                        imagemUsuario="assets/img/adorable_animals.svg"
+                        nomeUsuario="adorable_animals"
+                        razaoUsuario="Segue você"/>
+                    <Sugestao 
+                        imagemUsuario="assets/img/smallcutecats.svg"
+                        nomeUsuario="smallcutecats"
+                        razaoUsuario="Segue você"/>
         </div>
     );
+}
+
+function Sugestao(props) {
+    return (
+        <div class="sugestao">
+            <div class="usuario">
+                <img src={props.imagemUsuario} />
+                <div class="texto">
+                    <div class="nome">{props.nomeUsuario}</div>
+                    <div class="razao">{props.razaoUsuario}</div>
+                </div>
+            </div>
+
+            <div class="seguir">Seguir</div>
+        </div>
+    )
 }
