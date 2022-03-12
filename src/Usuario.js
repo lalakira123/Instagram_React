@@ -1,10 +1,17 @@
 export default function Usuario() {
     return (
+        <User imagem="assets/img/catanacomics.svg" usuario="catanacomics" nome="Catana"/>
+    )
+}
+
+function User(props) {
+    const {imagem, usuario, nome} = props;
+    return(
         <div class="usuario">
-            <img src="assets/img/catanacomics.svg" />
+            <img src={imagem} />
             <div class="texto">
-                <strong>catanacomics</strong>
-                Catana
+                <strong>{usuario}</strong>
+                {nome}
             </div>
         </div>
     )
